@@ -1,82 +1,119 @@
 'use strict'
 
-//grab Users name
+//===================== Variables ==========================
 var name = prompt("Who is it that wants to know about me?");
-
-alert (`Hi ${name} let's play a guessing game first, before reading my boring bio page.`);
-
+// variables for guessing game
+var random = Math.floor(Math.random() * 10) + 1;
+var win = "no";
 // variables for questions
 var kids, fish, anime, dog, birth, correct = (0);
 
-//=============================Questions =======================================
 
-kids = prompt("Do you think I have kids?").toLowerCase();
-if(kids === "yes" || kids === "y")
+
+
+// alert (`Hi ${name} let's play a guessing game first, before reading my boring bio page.`);
+
+// //=============================Questions =======================================
+
+// kids = prompt("Do you think I have kids?").toLowerCase();
+// if(kids === "yes" || kids === "y")
+// {
+//   alert("Correct!\n\nI have three kids ages 4, 8, and 10.");
+//   correct++;
+// }
+// else
+// {
+//   alert("Sorry, I actually have three kids ages 4, 8, and 10.");
+// }
+
+// //============================================================================
+
+// fish = prompt("Do I have freshwater fish?").toLowerCase();
+// if(fish === "no" || fish === "n")
+// {
+//   alert("Correct!\n\nI have a 90 gallon reef tank.");
+//   correct++;
+// }
+// else
+// {
+//   alert("No, I actually have saltwater fish.");
+// }
+
+// //================================================================================
+
+// anime = prompt("Do I watch anime with my kids?").toLowerCase();
+// if(anime === "yes" || anime === "y")
+// {
+//   alert("Correct!\n\nIt has become a nightly family routine to watch 2 or 3 episodes of Fairy Tail or One Piece before bed.");
+//   correct++;
+// }
+// else
+// {
+//   alert("Nope,\nOur family actually watches 2 or 3 episodes of Fairy Tail or One Piece every night before bed.");
+// }
+
+// //==================================================================================
+
+// dog = prompt("Do I have a dog?").toLowerCase();
+// if(dog === "yes" || dog === "y")
+// {
+//   alert("Correct!\nI have a 8 month old Labordoodle named Cider.");
+//   correct++;
+// }
+// else
+// {
+//   alert("No, I actually have a 8 month old Labordoodle named Cider.");
+// }
+
+// //=================================================================================
+
+// birth = prompt("Was I born in Washington?").toLowerCase();
+// if(birth === "no" || birth === "n")
+// {
+//   alert("Correct!\nI was born in San Diego but have live in Washington most of my life.");
+//   correct++;
+// }
+// else
+// {
+//   alert("I have lived in Washington most of my life, but I was born in San Diego.");
+// }
+
+//===================== Guessing Game ===========================================
+alert("Now let's play a guessing game.\nI am going to think of a number between 1-10 and you will have 4 tries to guess what number I'm thinking of.\nGood Luck.")
+
+for(var i = 1; i <= 4; i++)
 {
-  alert("Correct!\n\nI have three kids ages 4, 8, and 10.");
-  correct++;
+  var guess = prompt("Guess a number between 1-10.");
+  console.log("guess  " + guess);
+  if (guess == random)
+  {
+    alert("You nailed it!!\nMy number was " + random + "\nGood Job.");
+    correct++;
+    win = "yes";
+    break;
+  }
+  else if (guess < random)
+  {
+    alert("Too low.");
+  }
+  else if (guess > random)
+  {
+    alert("Too high.");
+  }
+  else
+  {
+    alert("Are you using a actual number?\n\nTry:\n1 2 3 4 5 6 7 8 9 10");
+  }
 }
-else
+if(win === "no")
 {
-  alert("Sorry, I actually have three kids ages 4, 8, and 10.");
+  alert("Sorry your our of guesses.\nMy number was " + random);
 }
-
-//============================================================================
-
-fish = prompt("Do I have freshwater fish?").toLowerCase();
-if(fish === "no" || fish === "n")
-{
-  alert("Correct!\n\nI have a 90 gallon reef tank.");
-  correct++;
-}
-else
-{
-  alert("No, I actually have saltwater fish.");
-}
-
-//================================================================================
-
-anime = prompt("Do I watch anime with my kids?").toLowerCase();
-if(anime === "yes" || anime === "y")
-{
-  alert("Correct!\n\nIt has become a nightly family routine to watch 2 or 3 episodes of Fairy Tail or One Piece before bed.");
-  correct++;
-}
-else
-{
-  alert("Nope,\nOur family actually watches 2 or 3 episodes of Fairy Tail or One Piece every night before bed.");
-}
-
-//==================================================================================
-
-dog = prompt("Do I have a dog?").toLowerCase();
-if(dog === "yes" || dog === "y")
-{
-  alert("Correct!\nI have a 8 month old Labordoodle named Cider.");
-  correct++;
-}
-else
-{
-  alert("No, I actually have a 8 month old Labordoodle named Cider.");
-}
-
-//=================================================================================
-
-birth = prompt("Was I born in Washington?").toLowerCase();
-if(birth === "no" || birth === "n")
-{
-  alert("Correct!\nI was born in San Diego but have live in Washington most of my life.");
-  correct++;
-}
-else
-{
-  alert("I have lived in Washington most of my life, but I was born in San Diego.");
-}
-
-//=====================
+//================= ================================================
 
 
-//==================== End of Questions ================================================
+
+
 
 //==================== Goodbye message =================================================
 

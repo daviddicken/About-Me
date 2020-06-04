@@ -84,7 +84,7 @@ alert("Now let's play a guessing game.\nI am going to think of a number between 
 for(var i = 1; i <= 4; i++)
 {
   var guess = prompt("Guess a number between 1-10.");
-  console.log("guess  " + guess);
+                       
   if (guess == random)
   {
     alert("You nailed it!!\nMy number was " + random + "\nGood Job.");
@@ -131,7 +131,7 @@ for(var j = 6; j > 0 && win === "no"; j--)
   
   for(var i = 0; i < names.length; i++)
   {
-    console.log(i);
+  
     if(nameGuess === names[i])
     {
       alert("Nice job!!\nYou are correct.\nMy kids names are: " + names[0] + ", " + names[1] + ", and " + names[2]);

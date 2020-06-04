@@ -70,7 +70,7 @@ else
 birth = prompt("Was I born in Washington?").toLowerCase();
 if(birth === "no" || birth === "n")
 {
-  alert("Correct!\nI was born in San Diego but have live in Washington most of my life.");
+  alert("Correct!\nI was born in San Diego but have lived in Washington most of my life.");
   correct++;
 }
 else
